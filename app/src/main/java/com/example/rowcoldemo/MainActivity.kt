@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
@@ -53,8 +54,8 @@ fun TextCell(text: String, modifier: Modifier = Modifier) {
 fun MainScreen(modifier: Modifier = Modifier) {
     Row {
         Text(
-            text = "Large Text",
-            Modifier.alignByBaseline(),
+            text = "Large Text\n\nMore Text",
+            Modifier.alignBy(LastBaseline),
             fontSize = 40.sp,
             fontWeight = FontWeight.Bold
         )
